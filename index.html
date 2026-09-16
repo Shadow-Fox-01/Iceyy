@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweet Scoops Ice Cream</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,22 +16,28 @@
         <a href="#home">Home</a>
         <a href="#flavors">Flavors</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Order</a>
     </nav>
 </header>
 
 <section class="hero" id="home">
     <div class="hero-text">
         <h1>Delicious Ice Cream For Everyone</h1>
+
         <p>
             Freshly made ice cream with premium ingredients and irresistible flavors.
             Treat yourself to happiness in every scoop.
         </p>
-        <button class="btn" onclick="scrollToFlavors()">Explore Flavors</button>
+
+        <button class="btn" onclick="scrollToFlavors()">
+            Explore Flavors
+        </button>
     </div>
 
     <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800" alt="Ice Cream">
+        <img
+            src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800"
+            alt="Ice Cream">
     </div>
 </section>
 
@@ -40,7 +47,8 @@
     <div class="flavors">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800">
+            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800" alt="Chocolate Ice Cream">
+
             <div class="card-content">
                 <h3>Chocolate Delight</h3>
                 <p>Rich chocolate with creamy texture.</p>
@@ -49,7 +57,8 @@
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800">
+            <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=800" alt="Strawberry Ice Cream">
+
             <div class="card-content">
                 <h3>Strawberry Dream</h3>
                 <p>Fresh strawberries and sweet cream.</p>
@@ -58,7 +67,8 @@
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1516559828984-fb3b99548b21?w=800">
+            <img src="https://images.unsplash.com/photo-1516559828984-fb3b99548b21?w=800" alt="Vanilla Ice Cream">
+
             <div class="card-content">
                 <h3>Vanilla Classic</h3>
                 <p>Traditional vanilla made to perfection.</p>
@@ -73,30 +83,56 @@
     <h2 class="section-title">About Us</h2>
 
     <div class="about">
-        <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800">
+
+        <img
+            src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800"
+            alt="Ice Cream Shop">
 
         <div class="about-text">
             <h3>Crafting Happiness Since 2010</h3>
+
             <p>
                 At Sweet Scoops, we create handcrafted ice cream using premium ingredients.
-                Our mission is to bring smiles through every scoop.
+                Our mission is to bring smiles through every scoop, cone, and sundae.
             </p>
         </div>
+
     </div>
 </section>
 
 <section id="contact">
-    <h2 class="section-title">Order Now</h2>
+    <h2 class="section-title">Place Your Order</h2>
 
     <div class="contact">
+
         <form id="orderForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Order"></textarea>
-            <button class="btn" type="submit">Place Order</button>
+
+            <input
+                id="name"
+                type="text"
+                placeholder="Your Name"
+                required>
+
+            <input
+                id="email"
+                type="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea
+                id="order"
+                rows="5"
+                placeholder="Example: 2 Chocolate Scoops, 1 Vanilla Cone"
+                required></textarea>
+
+            <button class="btn" type="submit">
+                Submit Order
+            </button>
+
         </form>
 
         <div id="orderMessage"></div>
+
     </div>
 </section>
 
@@ -104,7 +140,8 @@
     <p>© 2026 Sweet Scoops Ice Cream. All Rights Reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- Firebase Firestore Script -->
+<script type="module" src="script.js"></script>
 
 </body>
 </html>
