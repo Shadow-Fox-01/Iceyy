@@ -10,6 +10,8 @@ body{
     color:#333;
 }
 
+/* HEADER */
+
 header{
     background:linear-gradient(135deg,#ff7eb3,#ff758c);
     color:white;
@@ -19,6 +21,7 @@ header{
     align-items:center;
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
 .logo{
@@ -31,7 +34,14 @@ nav a{
     text-decoration:none;
     margin-left:20px;
     font-weight:bold;
+    transition:0.3s;
 }
+
+nav a:hover{
+    opacity:0.8;
+}
+
+/* HERO */
 
 .hero{
     min-height:90vh;
@@ -64,12 +74,21 @@ nav a{
     padding:14px 30px;
     border-radius:30px;
     cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff4d73;
 }
 
 .hero-image img{
     width:400px;
     max-width:100%;
+    border-radius:20px;
 }
+
+/* GENERAL SECTIONS */
 
 section{
     padding:80px 8%;
@@ -82,6 +101,8 @@ section{
     margin-bottom:50px;
 }
 
+/* FLAVORS */
+
 .flavors{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -93,7 +114,7 @@ section{
     border-radius:15px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+    transition:0.3s;
 }
 
 .card:hover{
@@ -111,12 +132,18 @@ section{
     text-align:center;
 }
 
+.card-content h3{
+    margin-bottom:10px;
+}
+
 .price{
     color:#ff5f7e;
     font-size:20px;
     font-weight:bold;
     margin-top:10px;
 }
+
+/* ABOUT */
 
 .about{
     display:flex;
@@ -135,10 +162,22 @@ section{
     flex:1;
 }
 
+.about-text h3{
+    margin-bottom:15px;
+}
+
+.about-text p{
+    line-height:1.8;
+}
+
+/* ORDER FORM */
+
 .contact{
     background:#ffeff4;
     border-radius:20px;
     padding:40px;
+    max-width:700px;
+    margin:auto;
 }
 
 .contact form{
@@ -149,35 +188,63 @@ section{
 
 input,
 textarea{
-    padding:12px;
-    border:1px solid #ccc;
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
     border-radius:10px;
+    font-size:16px;
 }
+
+textarea{
+    resize:vertical;
+}
+
+#orderMessage{
+    margin-top:15px;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* FOOTER */
 
 footer{
     background:#ff758c;
     color:white;
     text-align:center;
     padding:20px;
+    margin-top:50px;
 }
 
-#orderMessage{
-    color:green;
-    margin-top:15px;
-    font-weight:bold;
-}
+/* MOBILE */
 
 @media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
     .hero{
         flex-direction:column;
         text-align:center;
+        gap:30px;
     }
 
     .hero-text h1{
         font-size:40px;
     }
 
-    nav{
-        display:none;
+    .about{
+        flex-direction:column;
+    }
+
+    .section-title{
+        font-size:32px;
     }
 }
